@@ -1,0 +1,167 @@
+/* Start Component */
+
+/* Start Main-title 1 */
+
+.main-title {
+    position: relative;
+    margin: 0 auto 80px;
+    border: 2px solid #000;
+    width: fit-content;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    transition: var(--main-transition);
+    transition-delay: 0.1s;
+    border-radius: 50px;
+    font-size: 30px;
+}
+
+.main-title:hover {
+    color: #fff;
+    border: 2px solid transparent;
+}
+
+.main-title::before,
+.main-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    transition: 0.5s linear;
+    z-index: -1;
+}
+
+.main-title::before {
+    left: -30px;
+}
+
+.main-title::after {
+    right: -30px;
+}
+
+.main-title:hover::before,
+.main-title:hover::after {
+    width: 51%;
+    height: 101%;
+    border-radius: 0%;
+}
+
+.main-title:hover::before {
+    left: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.main-title:hover::after {
+    right: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* End Main-title 1 */
+
+/* Start Main-title 2 */
+
+.main-title-2 {
+    position: relative;
+    margin: 0 auto 80px;
+    border: 2px solid #000;
+    width: fit-content;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    transition: var(--main-transition);
+    transition-delay: 0.1s;
+    border-radius: 50px;
+    z-index: 100;
+    font-size: 30px;
+}
+
+.main-title-2:hover {
+    color: #fff;
+    border: 2px solid transparent;
+}
+
+.main-title-2::before,
+.main-title-2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    transition: 0.5s linear;
+    z-index: -1;
+}
+
+.main-title-2::before {
+    left: -30px;
+}
+
+.main-title-2::after {
+    right: -30px;
+}
+
+.main-title-2:hover::before,
+.main-title-2:hover::after {
+    width: 100%;
+    height: 101%;
+    border-radius: 40px;
+}
+
+.main-title-2:hover::before {
+    left: 0;
+}
+
+.main-title-2:hover::after {
+    right: 0;
+}
+
+/* End Main-title 2 */
+
+.section-padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.dots {
+    position: absolute;
+    background-image: url(../images/dots.png);
+    background-size: cover;
+    width: 180px;
+    height: 180px;
+    z-index: 1;
+}
+
+.dots-up {
+    right: 0;
+    top: 200px;
+}
+
+.dots-down {
+    left: 0;
+    bottom: 200px;
+}
+
+@media (max-width: 991px) {
+    .dots {
+        width: 100px;
+        height: 100px;
+    }
+
+    .dots-down {
+        left: 0;
+        bottom: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .events .dots {        
+        display: none;
+    }
+}
+/* End Component */
